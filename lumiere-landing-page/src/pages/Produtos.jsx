@@ -1,10 +1,14 @@
-import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function Produtos(){
     return(
         <>
-        <h1>produtos</h1>
-        <Navbar />
+        <Header title='Produtos' subtitle='Descubra fragâncias que iluminam seus momentos.'/>
+        <section>
+            {/* fazer carrosel */}
+        </section>
+        <Footer />
         </>
     );
 }
