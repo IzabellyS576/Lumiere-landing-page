@@ -1,0 +1,20 @@
+.swiper {
+  padding: 32px;
+}
+
+.swiper-slide {
+  width: 50%;
+  transition: 0.3 width ease;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: pink;
+  position: absolute;
+}
+
+.swiper-slide img{
+  width: 200%;
+}
+

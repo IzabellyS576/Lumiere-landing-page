@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
-import Card from "../../components/sobreComponents/Card";
+import Card from "../../components/Card";
 import { sobreContent } from "./sobreContent";
 
 function Sobre() {
