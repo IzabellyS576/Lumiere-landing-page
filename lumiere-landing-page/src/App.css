@@ -2,8 +2,10 @@
   font-family: Dealing;
   src: url('./fontes/Dealing-Display-BF67587c76dda92.otf');
 }
-body{
+html, body{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
   font-family: "Inter", sans-serif;

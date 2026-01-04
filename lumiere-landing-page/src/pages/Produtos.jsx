@@ -1,5 +1,5 @@
 import Footer from "../components/footer/Footer";
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 import Carousel from "../components/produtosComponents/Carousel";
 
 const keepItClassicImgs = ['/imgsProdutos/lavender-n-rosemary-candle.png',
@@ -20,7 +20,7 @@ const makeItFunImgs = ['/imgsProdutos/fig-leaves-candle.png',
 function Produtos(){
     return(
         <>
-        <Header title='Produtos' subtitle='Descubra fragâncias que iluminam seus momentos.'/>
+        <Header title='Produtos' subtitle='Descubra fragâncias que iluminam seus momentos.' page='Produtos'/>
         <section>
             <Carousel imgList={keepItClassicImgs}/>
             <Carousel imgList={makeItFunImgs} />
