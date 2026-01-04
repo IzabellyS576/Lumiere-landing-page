@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Footer from "../components/Footer";
+
 import Header from "../components/Header";
+import Footer from "../components/footer/Footer";
 
 function Contato(){
     const [name,setName] = useState();

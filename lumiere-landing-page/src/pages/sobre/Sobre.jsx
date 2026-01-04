@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 import { sobreContent } from "./sobreContent";
+import Footer from "../../components/footer/Footer";
 
 function Sobre() {
     const navigation = useNavigate();
@@ -16,6 +17,7 @@ function Sobre() {
       <Card title={sobreContent.benefit3.title} text={sobreContent.benefit3.text} img={sobreContent.benefit3.img}/>
       <Card title={sobreContent.benefit4.title} text={sobreContent.benefit4.text} img={sobreContent.benefit4.img}/>
       <button onClick={() => {navigation('/produtos')}}>Produtos</button>
+      <Footer />
     </>
   );
 }

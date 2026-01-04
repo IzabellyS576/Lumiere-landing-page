@@ -1,0 +1,74 @@
+.section{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #FFE77B;
+    padding: 30px;
+}
+
+.section li{
+    list-style: none;
+}
+
+.section h4{
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.brand_display{
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    width: 12vw;
+    margin-right: 1.5vw;
+}
+
+.brand_display_content {
+    width: 40%;
+}
+
+.brand_display_content span {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-bottom: 0.8vw;
+}
+.section .brand_display_content li {
+    display: inline-block;
+}
+
+.section .brand_display_content ul {
+    padding: 0;
+}
+
+.socials {
+    width: 2.5vw;
+    margin-right: 1.5vw;
+}
+
+.secoes ul, .contato ul {
+    padding-left: 15px;
+    margin: 0;
+}
+
+.secoes, .contato{
+    margin-top: 1vw;
+}
+
+.secoes a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    line-height: 1.6em;
+    font-weight: 350;
+}
+.contato p {
+    margin: 0;
+    line-height: 1.6em;
+}
+.contato p, .contato a {
+    font-weight: 350;
+}
