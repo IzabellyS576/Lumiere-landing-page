@@ -9,7 +9,7 @@ import './carousel.module.css';
 
 
 
-function Carousel({ imgList }) {
+function Carousel({ prodType }) {
   return(
     <>
     <Swiper
@@ -23,8 +23,14 @@ function Carousel({ imgList }) {
       loop={true}
       
     >
-      {(imgList.map((img,index)=>(
-        <SwiperSlide><img key={index} src={img}></img></SwiperSlide>
+      {(Object.values(prodType).map((product)=>(
+        <SwiperSlide>
+          <div key={product.name}>
+            <img src={product.img} alt={`${product.name} candle`}></img>
+            <span>{product.name}</span>
+            <span>{product.price}</span>
+          </div>
+        </SwiperSlide>
       )))}
     </Swiper>
     </>
