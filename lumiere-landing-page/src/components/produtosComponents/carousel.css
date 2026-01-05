@@ -1,0 +1,48 @@
+.swiper {
+ position: relative;
+ padding: 0;
+}
+
+
+.swiper-slide {
+  width: 40%;
+  transition: 0.3 width ease;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: transparent;
+  position: absolute;
+  padding: 30vh 0 30vh 0;  
+  transform: translateY(-50%); /* ajusta a posição vertical do padding */
+}
+
+.swiper-button-prev {
+  left: 0;
+  background: linear-gradient(
+    to left, transparent, rgba(217, 217, 217, 0.30) 13.82%, #EED14C 164.2%
+  );
+  padding: 30vh 2vw 30vh 6vw; /* Adiciona uma área clicável extra ao redor do ícone, que não está visível */ 
+}
+
+.swiper-button-next {
+  right: 0;
+  background: linear-gradient(
+    to right, transparent, rgba(217, 217, 217, 0.30) 13.82%, #EED14C 164.2%
+  );
+  padding: 30vh 6vw 30vh 2vw; /* Adiciona uma área clicável extra ao redor do ícone, que não está visível */ 
+}
+
+.swiper-button-prev:hover {
+  background: linear-gradient(
+    to left, transparent, rgba(217, 217, 217, 0.30) 13.82%, #b4960f 164.2%
+  );
+}
+.swiper-button-next:hover {
+  background: linear-gradient(
+    to right, transparent, rgba(217, 217, 217, 0.30) 13.82%, #b4960f 164.2%
+  );
+}
+

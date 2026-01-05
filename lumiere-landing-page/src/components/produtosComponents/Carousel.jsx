@@ -5,9 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './carousel.module.css';
+import 'swiper/css/pagination';
+import './carousel.css';
 
-
+import styles from './cardCarousel.module.css'
 
 function Carousel({ prodType }) {
   return(
@@ -15,20 +16,22 @@ function Carousel({ prodType }) {
     <Swiper
       // install Swiper modules
       modules={[Navigation, A11y]}
-      spaceBetween={50}
-      slidesPerView={3.5}
-      navigation
+      spaceBetween={5}
+      slidesPerView={4.2}
       draggable
+      navigation
       centeredSlides
       loop={true}
       
     >
       {(Object.values(prodType).map((product)=>(
         <SwiperSlide>
-          <div key={product.name}>
+          <div key={product.name} className={styles.card}>
             <img src={product.img} alt={`${product.name} candle`}></img>
-            <span>{product.name}</span>
-            <span>{product.price}</span>
+            <div className={styles.content}>
+              <span className={styles.product_name}>{product.name}</span>
+              <span className={styles.product_price}>{product.price}</span>
+            </div>
           </div>
         </SwiperSlide>
       )))}

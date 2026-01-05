@@ -1,0 +1,34 @@
+.card{
+    border: 3px solid #000;
+    display: flex;
+    flex-direction: column;
+    width: 18.5vw;
+    height: 28vw;
+}
+
+.card img {
+    margin: 15px;
+    height: 65%;
+    width: auto;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.product_name {
+    font-family: Dealing, serif;
+    color: #000;
+    font-feature-settings: 'swsh' on;
+    font-weight: 400;
+    font-size: 1.6vw;
+    width: 50%;
+    margin: 0;
+}
+
+.product_price{
+    font-weight: 500;
+    font-size: 1.2vw;
+}
