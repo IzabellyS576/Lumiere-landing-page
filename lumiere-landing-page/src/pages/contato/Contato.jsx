@@ -1,0 +1,47 @@
+import { useState } from "react";
+import TextareaAutosize from "react-textarea-autosize"
+
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import styles from "./Contato.module.css"
+
+function Contato(){
+    const [name,setName] = useState();
+    const [email, setEmail] = useState();
+    const [msg, setMsg] = useState();
+    return(
+        <>
+            <Header title='Contato' subtitle='Conte conosco para tornar sua experiência ainda melhor' />
+            <section className={styles.section}>
+                <form className={styles.form}>
+                    <h3>Conecte-se</h3>
+                    <h4>Estamos à disposição para esclarecer suas dúvidas.</h4>
+                    <div className={styles.grupo_input}>
+                        <input type="text" value={name} id="nome" placeholder=" " required onSubmit={(e)=>{setName(e.target.value); e.preventDefault()}} ></input>
+                        <label htmlFor="nome">Nome</label>
+                    </div>
+                    <div className={styles.grupo_input}>
+                        <input type='email' value={email} id="email" placeholder=" " required onSubmit={(e)=>{setName(e.target.value); e.preventDefault()}} ></input>
+                        <label htmlFor="email">Email</label>
+                    </div>
+                    <div className={styles.grupo_input}>
+                        <TextareaAutosize
+                            id='mensagem'
+                            placeholder=" "
+                            required
+                            value={msg}
+                            minRows={4}
+                            onChange={(e)=>(setMsg(e.target.value))}
+                            style={{overflow: "hidden", padding: '1rem'}}
+                        />
+                        <label htmlFor="mensagem">Mensagem</label>
+                    </div>
+                    <button type="submit" className={ `${'btn'} ${styles.form_btn}` } onSubmit={(e)=>{e.preventDefault()}}>Enviar</button>
+                </form>
+            </section>
+            <Footer />
+        </>
+    );
+}
+
+export default Contato
