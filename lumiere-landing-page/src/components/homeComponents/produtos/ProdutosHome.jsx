@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./ProdutosHome.module.css";
-import NavButton from "../../navButton/Button";
+import NavButton from "../../navButton/NavButton";
 
 function ProdutosHome() {
   const navigation = useNavigate();
