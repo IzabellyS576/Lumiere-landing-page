@@ -1,0 +1,42 @@
+.section {
+    background-color: #FFE77B;
+    min-height: 80vh;
+    position: relative;
+}
+
+.title_area, .subtitle_depoimentos{
+    position: absolute;
+    bottom: 13vh;
+    left: 8.8vw;
+}
+
+.title_produtos {
+    position: absolute;
+    bottom: 13vh;
+    left: 10vw;
+}
+.title_area h1, .title_produtos h1, .subtitle_depoimentos h1{
+    margin: 0;
+    font-size: clamp(7rem, 12vw, 12.5rem);
+    line-height: 0.7;
+}
+
+.title_area h2, .title_produtos h2 {
+    margin: 0;
+    margin-top: 3vh;
+    font-size: 2.5vw;
+    font-style: italic;
+    font-weight: 700;
+    padding-left: 8vw;
+    letter-spacing: 0.045em;
+}
+
+.subtitle_depoimentos h2{
+    margin: 0;
+    margin-top: 4.5vh;
+    font-size: 2.5vw;
+    font-style: italic;
+    font-weight: 700;
+    padding-left: 8vw;
+    letter-spacing: 0.045em;
+}

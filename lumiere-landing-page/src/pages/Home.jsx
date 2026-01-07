@@ -1,20 +1,19 @@
-import Footer from "../components/Footer";
+import Footer from "../components/footer/Footer";
 import Hero from "../components/homeComponents/hero/Hero";
 import ProdutosHome from "../components/homeComponents/produtos/ProdutosHome";
 import SobreHome from "../components/homeComponents/sobre/SobreHome";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
-function Home(){
-    return(
-        <>
-        <h1>Home</h1>
-        <Navbar />
-        <Hero />
-        <SobreHome />
-        <ProdutosHome />
-        <Footer />
-        </>
-    );
+function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <SobreHome />
+      <ProdutosHome />
+      <Footer />
+    </>
+  );
 }
 
-export default Home
+export default Home;

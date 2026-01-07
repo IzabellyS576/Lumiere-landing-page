@@ -1,0 +1,93 @@
+/* sobre_wide style */
+.sobre_wide {
+    border: 3px solid #000;
+    display: flex;
+    width: 75%;
+}
+.sobre_wide img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+.sobre_wide .content {
+    padding: 6.5vh 0 0 3vw;
+}
+.sobre_wide .content h3{
+    font-size: 2.1vw;
+    margin: 0;
+}
+.sobre_wide .content p {
+    margin: 0;
+    font-size: 1.3vw;
+    padding: 2vh 5.6vw 0 1.5vw;
+}
+.sobre_wide:last-of-type{
+    flex-direction: row-reverse;
+}
+
+/* sobre_small style */
+
+.sobre_small {
+    border: 3px solid #000;
+    margin: 20px 20px;
+    position: relative;
+    
+}
+.sobre_small:first-of-type{
+    margin-right: 5vw;
+}
+.sobre_small img{
+    position: absolute;
+    width: 5.8vw;
+    top: -4.5vh;
+    left: -8vh;
+}
+.sobre_small .content {
+    padding: 6vh 4vw;
+}
+.sobre_small .content h3{
+    font-size: 2.1vw;
+    margin: 0;
+}
+.sobre_small .content p {
+    margin: 0;
+    font-size: 1.3vw;
+    padding: 2vh 0 0 1.5vw;
+}
+
+/*depoimentos page*/
+
+.depoimentos {
+    border: 3px solid #000;
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    padding: 20px;
+    
+}
+.depoimentos img {
+    border-radius: 100%;
+    width: 14vh;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.depoimentos .content {
+    width: 78%;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+.depoimentos .content h3{
+    font-size: 1.6vw;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 2vh;
+}
+.depoimentos .content p {
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 0;
+}

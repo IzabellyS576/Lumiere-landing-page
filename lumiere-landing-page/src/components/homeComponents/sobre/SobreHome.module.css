@@ -1,0 +1,28 @@
+.section {
+    border: 3px solid #000;
+    box-shadow: -20px -20px 40px 0 #fff0ae, 20px 20px 20px 0 #fff0ae;
+    margin: 9% 20%;
+    display: flex;
+}
+
+.section img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content {
+    margin: 35px;
+}
+
+.content h2 {
+    font-size: 4.3vw;
+    text-align: center;
+    margin: 30px;
+}
+
+.content p {
+    line-height: 1.4;
+}
+
+
