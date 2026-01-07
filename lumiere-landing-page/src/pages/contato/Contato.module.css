@@ -76,7 +76,10 @@
 
 .form .form_btn{
     font-size: 1em;
-    padding-left: 4vw;
-    padding-right: 4vw;
     margin-bottom: 0;
+    border-radius: 40px;
+    border: 2px solid #000;
+    background: #FFB6C1;
+    font-weight: bold;
+    padding: 0.8vw 4vw;
 }

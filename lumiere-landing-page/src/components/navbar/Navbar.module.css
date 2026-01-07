@@ -29,12 +29,12 @@
         transparent 90%, black 90%, black 100%
     );
     background-repeat: no-repeat;
-    background-position-y: 100%;
+    background-position-y: 52%;
     background-size: 0% 16px;
 
     &:hover {
-        background-position: 100% 100%;
-        background-size: 100% 16px;
+        background-position: 52% 52%;
+        background-size: 50% 16px;
         cursor: pointer;
     }
 

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from './Hero.module.css'
+import Button from "../../navButton/Button";
 
 function Hero(){
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Hero(){
                 <h1>Lumière</h1>
                 <h2>A arte da perfumaria, moldada em luz.</h2>
             </div>
-            <button className={styles.btn} onClick={goToProdutos}>Descubra nossos aromas</button>
+            <Button style='hero' onClick={goToProdutos} text='Descubra nossos aromas'/>
         </div>
     );
 }
