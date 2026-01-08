@@ -77,8 +77,9 @@
 }
 .depoimentos .content {
     width: 78%;
-    margin: 20px 0;
-    padding: 0 20px;
+    margin: 0;
+    margin-top: 4vh;
+    padding: 0 4vh;
 }
 .depoimentos .content h3{
     font-size: 1.6vw;
@@ -89,5 +90,32 @@
 .depoimentos .content p {
     display: inline-block;
     font-size: 1.2em;
+    margin: 0;
+}
+
+.content_expandable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content_not_expanded{
+    margin-bottom: 4vh;
+}
+.toggle_btn {
+    border-radius: 40px;
+    border: 2px solid #000;
+    background: #FFB6C1;
+    padding: 0.5em 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 18vh 1vh 0; /*margin-right: 14 vh from img width + 4vh from .content lateral padding*/
+}
+
+.toggle_btn img {
+    height: 2vh;
+    width: auto;
     margin: 0;
 }
