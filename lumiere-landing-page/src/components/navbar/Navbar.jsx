@@ -22,7 +22,7 @@ function Navbar(){
                     <li
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={ activeTab === tab.id && ('')}
+                    className={ activeTab === tab.id ? ('') : styles.hover_tab}
                     >
                     <Link className={styles.pages_link} to={tab.link}>
                         {activeTab === tab.id && (
