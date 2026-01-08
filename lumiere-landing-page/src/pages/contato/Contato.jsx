@@ -3,7 +3,6 @@ import { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize"
 
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import styles from "./Contato.module.css"
 
 function Contato(){
@@ -44,7 +43,6 @@ function Contato(){
                     type="submit" className={ `${'btn'} ${styles.form_btn}` } onSubmit={(e)=>{e.preventDefault()}}>Enviar</ motion.button>
                 </form>
             </section>
-            <Footer />
         </>
     );
 }

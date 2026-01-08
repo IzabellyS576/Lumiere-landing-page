@@ -2,7 +2,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../components/header/Header";
 import Card from "../../components/card/Card";
 import { sobreContent } from "./sobreContent";
-import Footer from "../../components/footer/Footer";
 import styles from "./Sobre.module.css";
 import NavButton from "../../components/navButton/NavButton";
 
@@ -46,7 +45,6 @@ function Sobre() {
         />
         <NavButton style="sobre" onClick={goToProdutos} text="Produtos" />
       </section>
-      <Footer />
     </>
   );
 }
