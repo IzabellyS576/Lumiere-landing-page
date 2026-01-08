@@ -7,12 +7,25 @@
     display: flex;
     max-width: 52%;
     background-color: pink;
-    border: #000 3px solid;
+    border: #000 solid;
+    border-width: 3px 0;
+    box-shadow: 
+    inset 3px 0 0 0 #000,
+    inset -3px 0 0 0 #000;
     justify-content: space-around;
     align-items: center;
+    height: 7vh;
     
 }
-
+ul {
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
 .pages_link{
     display: inline-block;
     padding: 18px ;
@@ -25,18 +38,15 @@
 }
 
 .current_page{
-    background-image: linear-gradient(
-        transparent 90%, black 90%, black 100%
-    );
-    background-repeat: no-repeat;
-    background-position-y: 52%;
-    background-size: 0% 16px;
+    position: absolute;
+    border: 3px solid #000;
+    inset: 0;
+}
 
-    &:hover {
-        background-position: 52% 52%;
-        background-size: 50% 16px;
-        cursor: pointer;
-    }
+.hover_tab * {
+    transition: transform 0.15s ease-in-out;
+}
 
-    transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s, background-position 0s;
+.hover_tab:hover *{
+    transform: scale(1.05);
 }

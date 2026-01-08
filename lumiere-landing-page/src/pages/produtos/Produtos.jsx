@@ -1,4 +1,3 @@
-import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Carousel from "../../components/produtosComponents/Carousel";
 import { produtosList } from "./produtosList";
@@ -23,7 +22,6 @@ function Produtos(){
                 <Carousel prodType={makeItFun} />
             </div>
         </section>
-        <Footer />
         </>
     );
 }

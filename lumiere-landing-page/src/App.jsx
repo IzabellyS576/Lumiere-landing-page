@@ -5,11 +5,14 @@ import Produtos from "./pages/produtos/Produtos";
 import Depoimentos from "./pages/depoimentos/Depoimentos";
 import Contato from "./pages/contato/Contato";
 import './App.css'
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
@@ -17,6 +20,7 @@ function App() {
           <Route path="/depoimentos" element={<Depoimentos />} />
           <Route path="/contato" element={<Contato />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

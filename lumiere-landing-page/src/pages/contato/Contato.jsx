@@ -1,8 +1,8 @@
+import { motion } from 'motion/react'
 import { useState } from "react";
 import TextareaAutosize from "react-textarea-autosize"
 
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import styles from "./Contato.module.css"
 
 function Contato(){
@@ -21,7 +21,7 @@ function Contato(){
                         <label htmlFor="nome">Nome</label>
                     </div>
                     <div className={styles.grupo_input}>
-                        <input type='email' value={email} id="email" placeholder=" " required onSubmit={(e)=>{setName(e.target.value); e.preventDefault()}} ></input>
+                        <input type='email' value={email} id="email" placeholder=" " required onSubmit={(e)=>{setEmail(e.target.value); e.preventDefault()}} ></input>
                         <label htmlFor="email">Email</label>
                     </div>
                     <div className={styles.grupo_input}>
@@ -36,10 +36,13 @@ function Contato(){
                         />
                         <label htmlFor="mensagem">Mensagem</label>
                     </div>
-                    <button type="submit" className={ `${'btn'} ${styles.form_btn}` } onSubmit={(e)=>{e.preventDefault()}}>Enviar</button>
+                    <motion.button 
+                    whileHover={{ scale: 1.03, y:-1 }}
+                    whileTap={{ scale: 0.9, y:1 }}
+                    transition={{ type: 'spring' }}
+                    type="submit" className={ `${'btn'} ${styles.form_btn}` } onSubmit={(e)=>{e.preventDefault()}}>Enviar</ motion.button>
                 </form>
             </section>
-            <Footer />
         </>
     );
 }

@@ -1,4 +1,3 @@
-import Navbar from "../navbar/Navbar";
 import styles from './Header.module.css'
 
 function Header({ title, subtitle, page }) {
@@ -12,12 +11,6 @@ function espacamentoEspecial(page){
 
   return (
     <section className={styles.section}>
-      <div>
-        <div>
-          {/* <img src="/Logo1.svg" alt="Logo nome Lumière"></img> */}
-        </div>
-        <Navbar />
-      </div>
       <div className={espacamentoEspecial(page)}>
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
