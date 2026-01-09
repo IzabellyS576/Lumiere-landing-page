@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css'
 
 function Footer(){
@@ -8,9 +9,9 @@ function Footer(){
                 <div className={styles.brand_display_content}>
                     <span>A arte da perfumaria, moldada em luz.</span>
                     <ul>
-                        <li><img src="/imgsFooter/Instagram-vector.svg" alt="Instagram" className={styles.socials}></img></li>
-                        <li><img src="/imgsFooter/TikTok-vector.svg" alt="TikTok" className={styles.socials}></img></li>
-                        <li><img src="/imgsFooter/Pinterest-vector.svg" alt="Pinterest" className={styles.socials}></img></li>
+                        <li><a href='https://www.instagram.com/' target='_blank'><img src="/imgsFooter/Instagram-vector.svg" alt="Instagram" className={styles.socials}></img></a></li>
+                        <li><a href='https://www.tiktok.com/' target='_blank'><img src="/imgsFooter/TikTok-vector.svg" alt="TikTok" className={styles.socials}></img></a></li>
+                        <li><a href='https://br.pinterest.com/' target='_blank'><img src="/imgsFooter/Pinterest-vector.svg" alt="Pinterest" className={styles.socials}></img></a></li>
                     </ul>
                 </div>
             </div>
@@ -18,11 +19,19 @@ function Footer(){
                 <h4>Seções</h4>
                 <ul>
                     <li>
-                        <a href='/'>Home</a>
-                        <a href="/sobre">Sobre</a>
-                        <a href="/produtos">Produtos</a>
-                        <a href="/depoimentos">Depoimentos</a>
-                        <a href="/contato">Contato</a>
+                        <Link className={styles.link} to={'/'}>Home</Link>
+                    </li>
+                    <li>
+                        <Link className={styles.link} to={'/sobre'}>Sobre</Link>
+                    </li>
+                    <li>
+                        <Link className={styles.link} to={'/produtos'}>Produtos</Link>
+                    </li>
+                    <li>
+                        <Link className={styles.link} to={'/depoimentos'}>Depoimentos</Link>
+                    </li>
+                    <li>
+                        <Link className={styles.link} to={'/contato'}>Contato</Link>
                     </li>
                 </ul>
             </div>
@@ -33,7 +42,7 @@ function Footer(){
                         <p>Email: lumierestore177@gmail.com</p>
                     </li>
                     <li>
-                        <a>Nos envie um comentário</a>
+                        <Link className={styles.link} to={'/contato'}>Contato</Link>
                     </li>
                 </ul>
             </div>
