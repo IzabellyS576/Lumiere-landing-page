@@ -1,7 +1,7 @@
-import { motion } from 'motion/react'
+import { LayoutGroup, motion } from 'motion/react'
 import styles from './Navbar.module.css';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const tabs = [
     {id:'home', label:'home', link:'/' },
@@ -12,29 +12,36 @@ const tabs = [
 ];
 
 function Navbar(){
-    
-    let [activeTab, setActiveTab] = useState(tabs[0].id);
+    const location = useLocation();
+    const { pathname } = location;
+    let [activeTab, setActiveTab] = useState(pathname);
+
+    useEffect(() => {
+        setActiveTab(pathname);
+    }, [pathname]);
 
     return(
         <div className={styles.navbar}>
+        <LayoutGroup id="navbar_animation_group">   
             <ul>
                 {tabs.map((tab)=>(
                     <li
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={ activeTab === tab.id ? ('') : styles.hover_tab}
+                    className={ activeTab === tab.link ? ('') : styles.hover_tab}
                     >
                     <Link className={styles.pages_link} to={tab.link}>
-                        {activeTab === tab.id && (
+                        {activeTab === tab.link && (
                         <motion.div 
                         layoutId='active-pill'
+                        layout='position'
                         transition={{ type:'spring', duration:'0.6', damping:'20' }}
                         className={styles.current_page}></motion.div>
-                        )}
+                        )} <span style={{position: 'relative', zIndex:1}}></span>
                     {tab.label}</Link>
                     </li>
                 ))}
             </ul>
+        </LayoutGroup> 
         </div>
     );
 }
