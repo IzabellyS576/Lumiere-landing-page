@@ -68,6 +68,12 @@
     padding: 20px;
     
 }
+.depoimentos:first-of-type{
+    margin-top: 0;
+}
+.depoimentos:last-of-type{
+    margin-bottom: 0;
+}
 .depoimentos img {
     border-radius: 100%;
     width: 14vh;

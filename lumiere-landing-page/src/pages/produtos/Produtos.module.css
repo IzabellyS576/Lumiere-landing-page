@@ -8,3 +8,9 @@
 .display {
     margin: 15vh 0;
 }
+.display:first-of-type{
+    margin-top: 0;
+}
+.display:last-of-type{
+    margin-bottom: 0;
+}
