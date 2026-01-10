@@ -21,27 +21,29 @@ function Navbar(){
     }, [pathname]);
 
     return(
-        <div className={styles.navbar}>
-        <LayoutGroup id="navbar_animation_group">   
-            <ul>
-                {tabs.map((tab)=>(
-                    <li
-                    key={tab.id}
-                    className={ activeTab === tab.link ? ('') : styles.hover_tab}
-                    >
-                    <Link className={styles.pages_link} to={tab.link}>
-                        {activeTab === tab.link && (
-                        <motion.div 
-                        layoutId='active-pill'
-                        layout='position'
-                        transition={{ type:'spring', duration:'0.6', damping:'20' }}
-                        className={styles.current_page}></motion.div>
-                        )} <span style={{position: 'relative', zIndex:1}}></span>
-                    {tab.label}</Link>
-                    </li>
-                ))}
-            </ul>
-        </LayoutGroup> 
+        <div  className={styles.navbar_logo}> 
+            <img src='/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
+            <div className={styles.navbar}>
+            <LayoutGroup id="navbar_animation_group">   
+                <ul>
+                    {tabs.map((tab)=>(
+                        <li
+                        key={tab.id}
+                        className={ activeTab === tab.link ? ('') : styles.hover_tab}
+                        >
+                        <Link className={styles.pages_link} to={tab.link}>
+                            {activeTab === tab.link && (
+                            <motion.div 
+                            layoutId='active-pill'
+                            transition={{ type:'spring', duration:'0.6', damping:'20' }}
+                            className={styles.current_page}></motion.div>
+                            )} <span style={{position: 'relative', zIndex:1}}></span>
+                        {tab.label}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </LayoutGroup> 
+            </div>
         </div>
     );
 }

@@ -1,11 +1,25 @@
-.navbar{
+.navbar_logo{
     position:absolute;
     z-index: 998;
-    top: 20px;
-    left: 0;
-    right: 0;
-    margin-inline: auto; /* Centraliza sem distorcer o eixo X/Y */
-    width: fit-content;
+    top: 3vh;
+    display: flex;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 10vh;
+    width: auto;
+}
+
+.navbar_no_logo img{
+    display: none;
+}
+
+.navbar{
     display: flex;
     background-color: pink;
     border: #000 solid;
@@ -29,7 +43,7 @@ li{
 }
 .pages_link{
     display: inline-block;
-    padding: 18px ;
+    padding: 18px 35px;
     text-decoration: none;
     color:#000 ;
     text-transform: uppercase;
