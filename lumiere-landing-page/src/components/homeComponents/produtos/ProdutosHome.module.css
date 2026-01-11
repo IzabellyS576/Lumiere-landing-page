@@ -3,7 +3,8 @@
     flex-direction: column;
     margin: 9%;
     margin-bottom: 0;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .section h2{
@@ -14,8 +15,9 @@
 
 .cards_display{
     display: flex;
-    flex-shrink: 1;
     justify-content: center;
+    width: 90%;
+    justify-content: space-between;
 }
 
 .card {
@@ -27,12 +29,10 @@
     padding: 2.8vh;
 }
 
-.card:nth-of-type(2){
-    margin: auto 5vw;
-}
 
 .card_info {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     flex-shrink: 1;
     justify-content: space-between;
@@ -44,16 +44,16 @@
 .card .card_info h3{
     margin: 0;
     display: inline-block;
-    max-width: 35%;
+    width: 30%;
     font-family: Dealing, serif;
     color: #000;
     font-feature-settings: 'swsh' on;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1.6em;
 }
 
 .card .card_info span {
-    font-size: 1.3rem;
+    font-size: 1.3em;
     font-weight: 500;
 }
 
@@ -61,3 +61,56 @@
     width: 100%;
 }
 
+@media (max-width:1250px){
+    .card_info{
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        margin-bottom: 0;
+    }
+    .card .card_info h3{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .card{
+        padding: 15px;
+    }
+}
+
+@media (max-width: 860px){
+.section h2{
+    font-size: 3em;
+}
+.cards_display {
+    width: 100%;
+}
+.card .card_info h3{
+    font-size: 1.2rem;
+}
+.card .card_info span{
+    font-size: 1rem;
+}
+.card {
+    width: 20vw;
+    padding: 10px;
+}
+    
+}
+
+@media (max-width: 625px){
+    .cards_display{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 60%;
+        padding: 3%;
+        margin: 15px 0;
+    }
+}
+@media (max-width: 426px){
+    .section h2{
+        font-size: 2.2em;
+        margin: 15px;
+    }
+}

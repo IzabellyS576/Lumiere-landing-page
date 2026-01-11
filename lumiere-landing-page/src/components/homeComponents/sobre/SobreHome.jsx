@@ -25,13 +25,17 @@ function SobreHome() {
         <p>
           <strong>Lumière: fragrâncias que iluminam.</strong>
         </p>
+      
+
         <NavButton
           style="sobre_home"
           onClick={goToSobre}
           text="Ver benefícios"
         />
+        
       </div>
-      <img src="/imgsHome/sobre-nos-candles.png" alt="Coleção de velas"></img>
+      <img src="/imgsHome/sobre-nos-candles-portrait.png" alt="Coleção de velas" className={styles.portrait_img}></img>
+      <img src="/imgsHome/sobre-nos-candles-landscape.png" alt="Coleção de velas" className={styles.landscape_img}></img>
     </section>
   );
 }

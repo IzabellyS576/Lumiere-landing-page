@@ -75,4 +75,11 @@
     margin: 0;
     line-height: 1.6em;
     font-weight: 350;
+    overflow-wrap: break-word;
+}
+
+@media(max-width: 732px){
+    .section{
+        flex-direction: column;
+    }
 }
