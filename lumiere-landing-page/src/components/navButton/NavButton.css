@@ -68,10 +68,16 @@
     .produtos_home{
         padding: 10px 10vw;
     }
+    .sobre{
+        padding: 0.5em 3em;
+    }
 }
 @media (max-width: 460px) {
     .sobre_home, .produtos_home{
         font-size: 0.9em;
+    }
+    .sobre{
+        font-size: 1em;
     }
     
 }
