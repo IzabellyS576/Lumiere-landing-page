@@ -8,13 +8,14 @@ function Footer(){
                 <img src='/imgsFooter/Logo2.svg' alt="Logo circular Lumière" className={styles.logo}></img>
                 <div className={styles.brand_display_content}>
                     <span>A arte da perfumaria, moldada em luz.</span>
-                    <ul>
+                    <ul className={styles.socials_display}>
                         <li><a href='https://www.instagram.com/' target='_blank'><img src="/imgsFooter/Instagram-vector.svg" alt="Instagram" className={styles.socials}></img></a></li>
                         <li><a href='https://www.tiktok.com/' target='_blank'><img src="/imgsFooter/TikTok-vector.svg" alt="TikTok" className={styles.socials}></img></a></li>
                         <li><a href='https://br.pinterest.com/' target='_blank'><img src="/imgsFooter/Pinterest-vector.svg" alt="Pinterest" className={styles.socials}></img></a></li>
                     </ul>
                 </div>
             </div>
+            <nav className={styles.navigation}>
             <div className={styles.secoes}>
                 <h4>Seções</h4>
                 <ul>
@@ -42,10 +43,11 @@ function Footer(){
                         <p>Email: lumierestore177@gmail.com</p>
                     </li>
                     <li>
-                        <Link className={styles.link} to={'/contato'}>Contato</Link>
+                        <Link className={styles.link} to={'/contato'}>Entre em contato</Link>
                     </li>
                 </ul>
             </div>
+            </nav>
         </div>
     );
 }
