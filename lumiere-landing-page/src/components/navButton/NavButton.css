@@ -4,6 +4,8 @@
   background: #FFB6C1;
   font-weight: bold;
   padding: 0.8vw 1.5vw;
+  color: #000;
+  text-decoration: none;
 }
 
 .all_btns:hover{
