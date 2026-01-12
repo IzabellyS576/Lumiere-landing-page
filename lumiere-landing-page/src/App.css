@@ -1,9 +1,9 @@
 @font-face {
   font-family: Dealing;
-  src: url('./fontes/Dealing-Display-BF67587c76dda92.woff2') format('woff2'),
-       url('./fontes/Dealing-Display-BF67587c76dda92.woff') format('woff'),
-       url('./fontes/Dealing-Display-BF67587c76dda92.otf') format('opentype');
-      font-weight: 400; /* ou 'normal' */
+  src: url('/fontes/Dealing.woff2') format('woff2'),
+       url('/fontes/Dealing.woff') format('woff'),
+       url('/fontes/Dealing.otf') format('opentype');
+      font-weight: normal; /* ou 'normal' */
       font-style: normal;
       font-display: swap;
 }
