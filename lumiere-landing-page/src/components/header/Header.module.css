@@ -1,8 +1,7 @@
 .section {
     background-color: #FFE77B;
-    height: 80vh;
+    height: 80dvh;
     position: relative;
-    margin-bottom: 10vh;
 }
 
 .title_area, .title_depoimentos, .title_produtos{

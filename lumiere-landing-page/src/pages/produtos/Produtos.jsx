@@ -12,7 +12,7 @@ function Produtos(){
     return(
         <>
         <Header title='Produtos' subtitle='Descubra fragâncias que iluminam seus momentos.' page='Produtos'/>
-        <section>
+        <section className={styles.section}>
             <div className={styles.display}>
                 <h3 className={`${styles.collection_name} section_title`}>Keep it classic</h3>
                 <Carousel prodType={keepItClassic}/>
