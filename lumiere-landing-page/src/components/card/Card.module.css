@@ -130,7 +130,7 @@
     padding: 0 4vh;
 }
 .depoimentos .content h3{
-    font-size: 1.6vw;
+    font-size: 1.5em;
     display: inline-block;
     margin: 0;
     margin-bottom: 2vh;
@@ -166,4 +166,24 @@
     height: 2vh;
     width: auto;
     margin: 0;
+}
+@media(max-width:860px){
+    .depoimentos .content h3{
+        font-size: 1.3em;
+    }
+    .depoimentos .content p{
+        font-size: 1em;
+    }
+}
+@media(max-width:435px){
+    .depoimentos{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle_btn{
+        margin: auto;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
 }

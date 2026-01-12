@@ -31,7 +31,7 @@ function Contato(){
         console.log("Erro", data);
         Swal.fire({
             icon: "error",
-            title: "Oops...",
+            title: "Ops...",
             text: "Algo deu errado.",
         });
       }
@@ -39,7 +39,7 @@ function Contato(){
       console.log("Erro de requisição", error);
       Swal.fire({
             icon: "error",
-            title: "Oops...",
+            title: "Ops...",
             text: "Ocorreu um erro ao enviar.",
         });
     }
@@ -50,8 +50,10 @@ function Contato(){
             <Header title='Contato' subtitle='Conte conosco para tornar sua experiência ainda melhor' />
             <section className={styles.section}>
                 <form className={styles.form} onSubmit={onSubmit} >
-                    <h3>Conecte-se</h3>
-                    <h4>Estamos à disposição para esclarecer suas dúvidas.</h4>
+                    <div className={styles.form_title}>
+                        <h3>Conecte-se</h3>
+                        <h4>Estamos à disposição para esclarecer suas dúvidas.</h4>
+                    </div>
                     <div className={styles.grupo_input}>
                         <input type="text" name='nome' id="nome" placeholder=" " required ></input>
                         <label htmlFor="nome">Nome</label>

@@ -5,7 +5,7 @@ function Header({ title, subtitle, page }) {
 {/*Por conta da tipografia, alguns espaçamentos precisam ser personalizados a fim de manter harmonia no design*/}
 function espacamentoEspecial(page){
   if (page==='Produtos') return styles.title_produtos;
-  if (page==='Depoimentos') return styles.subtitle_depoimentos;
+  if (page==='Depoimentos') return styles.title_depoimentos;
   return styles.title_area;
 }
 

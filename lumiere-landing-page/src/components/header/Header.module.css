@@ -5,7 +5,7 @@
     margin-bottom: 10vh;
 }
 
-.title_area, .subtitle_depoimentos, .title_produtos{
+.title_area, .title_depoimentos, .title_produtos{
     position: absolute;
     bottom: 13vh;
     left: 8.8vw;
@@ -14,7 +14,7 @@
 .title_produtos {
     left: 10vw;
 }
-.title_area h1, .title_produtos h1, .subtitle_depoimentos h1{
+.title_area h1, .title_produtos h1, .title_depoimentos h1{
     margin: 0;
     font-size: clamp(7rem, 12vw, 12.5rem);
     line-height: 0.7;
@@ -30,7 +30,7 @@
     letter-spacing: 0.045em;
 }
 
-.subtitle_depoimentos h2{
+.title_depoimentos h2{
     margin: 0;
     margin-top: 4.5vh;
     font-size: 2.5vw;
@@ -44,18 +44,27 @@
     .section{
         height: 60vh;
     }
-    .title_area, .title_produtos {
+    .title_area, .title_produtos, .title_depoimentos {
         bottom: 8vh;
     }
     .title_produtos{
         left: 5em;
     }
-    .title_area h1, .title_produtos h1, .subtitle_depoimentos h1{
+    
+    .title_area h1, .title_produtos h1, .title_depoimentos h1{
         font-size: 5em;
     }
-    .title_area h2, .title_produtos h2, .subtitle_depoimentos h2{
+    .title_area h2, .title_produtos h2, .title_depoimentos h2{
         font-size: 1.2em;
         padding-right: 30px;
+    }
+    .title_depoimentos h2{
+        margin-top: 1em;
+    }
+}
+@media (max-width:560px){
+    .title_depoimentos h1{
+        font-size: 4em;
     }
 }
 @media (max-width: 435px){
@@ -65,10 +74,18 @@
     .title_produtos{
         left: 3.5em;
     }
-    .title_area h1, .title_produtos h1, .subtitle_depoimentos h1{
+    .title_area h1, .title_produtos h1 {
         font-size: 3.8em;
     }
-    .title_area h2, .title_produtos h2, .subtitle_depoimentos h2{
+    .title_depoimentos h1{
+        font-size: 3em;
+    }
+    .title_area h2, .title_produtos h2, .title_depoimentos h2{
         font-size: 1.1em
+    }
+}
+@media (max-width: 322px){
+    .title_depoimentos{
+        left: 1em;
     }
 }
