@@ -10,7 +10,10 @@
     object-fit: cover;
 }
 .sobre_wide .content {
-    padding: 6.5vh 0 0 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
 }
 .sobre_wide .content h3{
     font-size: 2.1vw;
@@ -25,11 +28,29 @@
     flex-direction: row-reverse;
 }
 
+@media (max-width:860px){
+    .sobre_wide{
+        flex-direction: column-reverse;
+    }
+    .sobre_wide .content {
+        margin: 20px 0;
+    }
+    .sobre_wide .content h3{
+        font-size: 1.5em;
+    }
+    .sobre_wide .content p{
+        font-size: 0.9em;
+    }
+    .sobre_wide:last-of-type{
+        flex-direction: column-reverse;
+    }
+}
+
 /* sobre_small style */
 
 .sobre_small {
     border: 3px solid #000;
-    margin: 20px 20px;
+    margin: 20px;
     position: relative;
     
 }
@@ -39,8 +60,8 @@
 .sobre_small img{
     position: absolute;
     width: 5.8vw;
-    top: -4.5vh;
-    left: -8vh;
+    top: -2vw;
+    left: -3.8vw;
 }
 .sobre_small .content {
     padding: 6vh 4vw;
@@ -53,6 +74,27 @@
     margin: 0;
     font-size: 1.3vw;
     padding: 2vh 0 0 1.5vw;
+}
+
+@media (max-width: 860px){
+    .sobre_small:first-of-type{
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+    .sobre_small{
+        margin: 40px auto;
+    }
+    .sobre_small img{
+        width: 4em;
+        top: -1.5em;
+        left: -2.5em;
+    }
+    .sobre_small .content h3{
+        font-size: 1.5em;
+    }
+    .sobre_small .content p {
+        font-size: 0.9em;
+    }
 }
 
 /*depoimentos page*/
@@ -88,7 +130,7 @@
     padding: 0 4vh;
 }
 .depoimentos .content h3{
-    font-size: 1.6vw;
+    font-size: 1.5em;
     display: inline-block;
     margin: 0;
     margin-bottom: 2vh;
@@ -124,4 +166,24 @@
     height: 2vh;
     width: auto;
     margin: 0;
+}
+@media(max-width:860px){
+    .depoimentos .content h3{
+        font-size: 1.3em;
+    }
+    .depoimentos .content p{
+        font-size: 1em;
+    }
+}
+@media(max-width:435px){
+    .depoimentos{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle_btn{
+        margin: auto;
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
 }

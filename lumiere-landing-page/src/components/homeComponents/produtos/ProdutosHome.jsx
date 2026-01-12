@@ -12,7 +12,6 @@ function ProdutosHome() {
       <h2 className="section_title">Produtos</h2>
       <div className={styles.cards_display}>
         <div className={styles.card}>
-          {/* <img src="/imgsHome/best-seller-sticker.svg" alt='Sticker best seller'></img> */}
           <img
             src="/imgsHome/cherry-blossom-candle.png"
             alt="Vela Cherry Blossom"

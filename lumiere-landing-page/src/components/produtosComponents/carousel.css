@@ -1,22 +1,28 @@
 .swiper {
  position: relative;
  padding: 0;
+ 
 }
 
-
 .swiper-slide {
-  width: 40%;
-  transition: 0.3 width ease;
+  position: relative;
+  height: auto; 
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .swiper-button-prev, .swiper-button-next {
-  color: transparent;
   position: absolute;
-  padding: 30vh 0 30vh 0;  
-  transform: translateY(-50%); /* ajusta a posição vertical do padding */
+  top: 0;           
+  bottom: 0;        
+  height: 100%;     
+  width: 10em;     
+  margin: 0;        
+  z-index: 10;      
+  transform: none; 
+  border: none;
+  cursor: pointer;
+  color: transparent;
 }
 
 .swiper-button-prev {
@@ -24,7 +30,6 @@
   background: linear-gradient(
     to left, transparent, rgba(217, 217, 217, 0.30) 13.82%, #EED14C 164.2%
   );
-  padding: 30vh 2vw 30vh 6vw; /* Adiciona uma área clicável extra ao redor do ícone, que não está visível */ 
 }
 
 .swiper-button-next {
@@ -32,7 +37,6 @@
   background: linear-gradient(
     to right, transparent, rgba(217, 217, 217, 0.30) 13.82%, #EED14C 164.2%
   );
-  padding: 30vh 6vw 30vh 2vw; /* Adiciona uma área clicável extra ao redor do ícone, que não está visível */ 
 }
 
 .swiper-button-prev:hover {
@@ -46,3 +50,8 @@
   );
 }
 
+@media(max-width: 860px){
+  .swiper-button-prev, .swiper-button-next {
+    width: 5em;
+  }
+}

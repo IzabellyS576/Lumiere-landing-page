@@ -1,0 +1,69 @@
+.conjunto {
+    position: relative;
+}
+.show_menu {
+    background-color: #FFB6C1;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    box-shadow: 
+    inset 0 2px 0 0 #000,
+    inset 0 -2px 0 0 #000;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    display: flex;
+}
+
+.show_menu ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.show_menu li{
+    display: block;
+    list-style: none;
+    padding: 0 2em;
+    margin: 4px 0;
+    text-align: center;
+    padding: 1em 2em;
+}
+.show_menu li:first-of-type{
+    margin-top: 0;
+}
+.show_menu li:last-of-type{
+    margin-bottom: 0;
+}
+.pages_link{
+    display: inline-block;
+    text-decoration: none;
+    color:#000 ;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 1;
+}
+.current_page{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.hamb_btn{
+    position: absolute;
+    z-index: 999;
+    width: 3.5rem;
+    height:3.5rem;
+    background-color: #FFB6C1;
+    border: 2px solid #000;
+}
+
+.hamb_rectangle {
+    position: absolute;
+    z-index: 999;
+    height: 0.2rem;
+    width: 1.8rem;
+    background: #000;
+    border-radius: 5px;
+}

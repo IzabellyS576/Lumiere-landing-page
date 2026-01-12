@@ -1,8 +1,8 @@
 .section{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #FFE77B;
-    padding: 30px;
+    padding: 40px;
     margin-top: 15vh;
 }
 
@@ -12,10 +12,12 @@
 }
 
 .section .link {
-    text-decoration: none;
     color: #000;
     line-height: 1.6em;
     font-weight: 350;
+}
+.secoes .link {
+    text-decoration: none;
 }
 
 .section .link:hover{
@@ -35,12 +37,15 @@
 
 
 .logo {
-    width: 12vw;
-    margin-right: 1.5vw;
+    width: 10em;
+    margin-right: 1.5em;
 }
 
 .brand_display_content {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
 }
 
 .brand_display_content span {
@@ -53,18 +58,22 @@
     display: inline-block;
 }
 
-.section .brand_display_content ul {
+.socials_display {
+    display: flex;
     padding: 0;
 }
-
 .socials {
-    width: 2.5vw;
+    width: 2em;
     margin-right: 1.5vw;
 }
-
+.navigation{
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+}
 .secoes ul, .contato ul {
     padding-left: 15px;
-    margin: 0;
+    margin-left: 10px;
 }
 
 .secoes, .contato{
@@ -75,4 +84,83 @@
     margin: 0;
     line-height: 1.6em;
     font-weight: 350;
+    overflow-wrap: break-word;
+}
+
+@media(max-width: 770px){
+    .section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand_display{
+        width: 80%;
+    }
+    .brand_display_content{
+        width: 100%;
+    }
+    .logo{
+        width: 8em;
+    }
+    .socials{
+        margin: 0 10px;
+    }
+    .navigation{
+        width: 100%;
+        justify-content: space-evenly;
+        font-size: 0.9em;
+    }
+    .navigation .secoes, .navigation .contato{
+        display: flex;
+        align-items: center;
+    }
+    .navigation h4{
+        margin: 0;
+    }
+    .navigation ul{
+        width: 10em;
+    }
+}
+
+@media (max-width: 522px){
+    .navigation .secoes, .navigation .contato{
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+        height: 100%;
+        margin-top: 10px;
+    };
+}
+
+@media(max-width: 426px){
+    .section{
+        padding: 20px;
+    }
+    .brand_display{
+        width: 100%;
+    }
+}
+@media(max-width: 357px){
+    .brand_display{
+        flex-direction: column;
+    }
+    .brand_display_content{
+        align-items: center;
+        margin: 10px 0;
+    }
+    .logo{
+        width: 6em;
+        margin: 0;
+    }
+    .brand_display_content span{
+        font-size: 1em;
+        text-align: center;
+    }
+    .socials{
+        width: 1.8em;
+    }
+    .navigation ul{
+        margin-left: 5px;
+        width: 10em;
+        font-size: 0.8em;
+    }
 }

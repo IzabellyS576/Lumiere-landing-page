@@ -3,7 +3,7 @@
     position: relative;
     flex-direction: column;
     max-width: 100%;
-    min-height: 90vh;
+    height: 90vh;
     max-width: 100%;
     justify-content: end;
     margin-bottom: 10vh;
@@ -63,4 +63,45 @@
     margin: 0;
     display: inline-block;
     width: 34vw;
+}
+
+@media ( max-width:860px ) {
+    .hero{
+        height: 60vh;
+    }
+    .hero .title_area h1{
+        font-size: 5em;
+    }
+    .hero .title_area h2{
+        font-size: 1.2em;
+        width: 15em;
+    }
+}
+@media ( max-width: 560px) {
+    .hero .title_area {
+        margin-left: 3.5em;
+    }
+    .hero .title_area h2{
+        width: 12em;
+        left: 4em;
+    }
+}
+@media ( max-width: 435px ){
+    .hero .title_area h1{
+        font-size: 3.5em;
+    }
+    .hero .title_area h2{
+        left: 3em;
+        top: -0.5em;
+    }
+}
+@media (max-width: 364px){
+    .hero .title_area h2{
+        left: 3em;
+        width: 10em;
+        top: -2em;
+    }
+    .hero .title_area{
+        margin-left: 2.5em;
+    }
 }

@@ -1,6 +1,6 @@
 import { LayoutGroup, motion } from 'motion/react'
 import styles from './Navbar.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const tabs = [
@@ -14,18 +14,43 @@ const tabs = [
 function Navbar(){
     const location = useLocation();
     const { pathname } = location;
-    let [activeTab, setActiveTab] = useState(pathname);
+    const [activeTab, setActiveTab] = useState(pathname);
+    const [openMenu, setOpenMenu] = useState(false);
+    const menuRef = useRef(null);
+    const btnRef = useRef(null);
 
     useEffect(() => {
         setActiveTab(pathname);
     }, [pathname]);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+    
+        if (!openMenu) return;
+        if (
+            menuRef.current && !menuRef.current.contains(event.target) &&
+            btnRef.current && !btnRef.current.contains(event.target)
+        ) {
+            setOpenMenu(false);
+        }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [openMenu]); 
+
     return(
-        <div  className={styles.navbar_logo}> 
-            <img src='/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
-            <div className={styles.navbar}>
-            <LayoutGroup id="navbar_animation_group">   
-                <ul>
+        <nav className={styles.navbar}>
+            <div  className={styles.navbar_content}> 
+                <img src='/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
+                <button ref={btnRef} className={openMenu ? styles.navbar_toggle_open : styles.navbar_toggle_closed} onClick={() => {setOpenMenu(!openMenu)}}>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                    <span className={styles.bar}></span>
+                </button>  
+                <ul ref={menuRef} className={ openMenu ? styles.navbar_menu : styles.nav_menu_closed}>
                     {tabs.map((tab)=>(
                         <li
                         key={tab.id}
@@ -42,9 +67,8 @@ function Navbar(){
                         </li>
                     ))}
                 </ul>
-            </LayoutGroup> 
             </div>
-        </div>
+        </nav>
     );
 }
 
