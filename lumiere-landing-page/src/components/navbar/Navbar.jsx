@@ -1,6 +1,6 @@
 import { LayoutGroup, motion } from 'motion/react'
 import styles from './Navbar.module.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const tabs = [
@@ -16,21 +16,41 @@ function Navbar(){
     const { pathname } = location;
     const [activeTab, setActiveTab] = useState(pathname);
     const [openMenu, setOpenMenu] = useState(false);
+    const menuRef = useRef(null);
+    const btnRef = useRef(null);
 
     useEffect(() => {
         setActiveTab(pathname);
     }, [pathname]);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+    
+        if (!openMenu) return;
+        if (
+            menuRef.current && !menuRef.current.contains(event.target) &&
+            btnRef.current && !btnRef.current.contains(event.target)
+        ) {
+            setOpenMenu(false);
+        }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [openMenu]); 
+
     return(
         <nav className={styles.navbar}>
             <div  className={styles.navbar_content}> 
                 <img src='/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
-                <button className={openMenu ? styles.navbar_toggle_open : styles.navbar_toggle_closed} onClick={() => {setOpenMenu(!openMenu)}}>
+                <button ref={btnRef} className={openMenu ? styles.navbar_toggle_open : styles.navbar_toggle_closed} onClick={() => {setOpenMenu(!openMenu)}}>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
                 </button>  
-                <ul className={ openMenu ? styles.navbar_menu : styles.nav_menu_closed}>
+                <ul ref={menuRef} className={ openMenu ? styles.navbar_menu : styles.nav_menu_closed}>
                     {tabs.map((tab)=>(
                         <li
                         key={tab.id}
