@@ -44,7 +44,7 @@ function Navbar(){
     return(
         <nav className={styles.navbar}>
             <div  className={styles.navbar_content}> 
-                <img src='/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
+                <img src='/imgsNav/Logo1.svg' alt='Logo escrita Lumière' className={styles.logo}></img>
                 <button ref={btnRef} className={openMenu ? styles.navbar_toggle_open : styles.navbar_toggle_closed} onClick={() => {setOpenMenu(!openMenu)}}>
                     <span className={styles.bar}></span>
                     <span className={styles.bar}></span>
